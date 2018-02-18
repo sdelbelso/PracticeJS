@@ -4,11 +4,11 @@ class QueueWithStacks {
 	    this.stackTwo = new Stack();
 	}
 	
-	function enqueue(data) {
+	enqueue(data) {
 		this.stackOne.push(data);
 	}
 	
-	function dequeue() {
+	dequeue() {
 		if (this.stackTwo.length === 0) {
 			this.transferStackOneToTwo();
 			return this.stackTwo.pop();
@@ -16,7 +16,7 @@ class QueueWithStacks {
 		return this.stackTwo.pop();
 	}
 	
-	function transferStackOneToTwo() {
+	transferStackOneToTwo() {
 		this.stackOne.forEach((item) => {
 			this.stackTwo.push(item);
 			this.stackOne.pop();
