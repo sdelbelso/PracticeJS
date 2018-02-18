@@ -1,6 +1,8 @@
 class QueueWithStacks {
-	const stackOne = new Stack();
-	const stackTwo = new Stack();
+	constructor() {
+	    this.stackOne = new Stack();
+	    this.stackTwo = new Stack();
+	}
 	
 	function enqueue(data) {
 		this.stackOne.push(data);
